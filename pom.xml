@@ -98,6 +98,22 @@
                     </execution>
                 </executions>
             </plugin>
+<reporting>
+  <plugins>
+    <plugin>
+      <groupId>org.jacoco</groupId>
+      <artifactId>jacoco-maven-plugin</artifactId>
+      <version>0.8.7</version>
+      <configuration>
+        <outputDirectory>${project.build.directory}/site/jacoco</outputDirectory>
+        <formats>
+          <format>xml</format> <!-- This is the key: generate the XML report -->
+        </formats>
+      </configuration>
+    </plugin>
+  </plugins>
+</reporting>
+
 		</plugins>
 	</build>
 
